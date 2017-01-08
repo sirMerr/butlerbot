@@ -27,7 +27,7 @@ butlerbot.on('message', message => {
 		message.reply(message.author.avatarURL);
 	}
 
-	if (msg.startsWith('~emojify')) {
+	if (msg.startsWith('~emojify ')) {
 		const m = msg.split('~emojify ')[1];
 
 		if (/^[a-zA-Z !]+$/.test(m)) {
@@ -44,7 +44,7 @@ butlerbot.on('message', message => {
 						arr.push(`:regional_indicator_${l.toLowerCase()}:`);
 				}
 			});
-			message.channel.send(arr.join(''));
+			message.channel.send(arr.join('')).then(message.delete());
 		} else {
 			message.reply('your message included non-letters. Try again sir.');
 		}
