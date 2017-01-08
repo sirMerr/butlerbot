@@ -1,0 +1,23 @@
+{
+  "name": "butlerbot",
+  "version": "1.0.0",
+  "description": "A slack bot which greets users among other butler tasks",
+  "main": "lib/butlerbot.js",
+  "repository": "https://github.com/sirMerr/butlerbot.git",
+  "author": "Tiffany Le-Nguyen",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "xo": "^0.17.1"
+  },
+  "scripts": {
+    "test": "xo"
+  },
+  "xo": {
+    "esnext": true
+  },
+  "devDependencies": {
+    "xo": "^0.17.1"
+  }
+}
