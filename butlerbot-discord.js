@@ -14,9 +14,9 @@ butlerbot.on('message', message => {
 
 	// log messages
 	if (message.channel.isPrivate) {
-		console.log(`(Private) ${message.author.name}: ${message.content}`);
+		console.log(`(Private) ${message.author.username}: ${message.content}`);
 	} else {
-		console.log(`(${message.guild.name} / ${message.channel.name}) ${message.author.name}: ${message.content}`);
+		console.log(`(${message.guild.name} / ${message.channel.name}) ${message.author.username}: ${message.content}`);
 	}
 
 	if (msg === 'butler' || msg === 'butlerbot') {
