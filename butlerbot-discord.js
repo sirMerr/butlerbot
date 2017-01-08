@@ -28,9 +28,14 @@ butlerbot.on('message', message => {
 	}
 
 	if (msg.startsWith('~emojify ')) {
+		let vertical = false;
+		if (msg.contains('(vertical)')) {
+			vertical = true;
+		}
+
 		const m = msg.split('~emojify ')[1];
 
-		if (/^[a-zA-Z !]+$/.test(m)) {
+		if (/^[a-zA-Z0-9 !]+$/.test(m)) {
 			const arr = [];
 			m.split('').forEach(l => {
 				switch (l) {
@@ -44,7 +49,7 @@ butlerbot.on('message', message => {
 						arr.push(`:regional_indicator_${l.toLowerCase()}:`);
 				}
 			});
-			message.channel.send(arr.join('')).then(message.delete());
+			message.channel.send(arr.join(vertical ? '\n' : '')).then(message.delete());
 		} else {
 			message.reply('your message included non-letters. Try again sir.');
 		}
