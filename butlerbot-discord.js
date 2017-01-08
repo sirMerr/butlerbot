@@ -16,14 +16,38 @@ butlerbot.on('message', message => {
 	if (message.channel.isPrivate) {
 		console.log(`(Private) ${message.author.name}: ${message.content}`);
 	} else {
-		console.log(`(${message.server.name} / ${message.channel.name}) ${message.author.name}: ${message.content}`);
+		console.log(`(${message.guild.name} / ${message.channel.name}) ${message.author.name}: ${message.content}`);
 	}
+
 	if (msg === 'butler' || msg === 'butlerbot') {
 		message.reply('greetings master.');
 	}
 
 	if (msg === 'who\'s the idiot' || msg === 'idiot') {
 		message.reply(message.author.avatarURL);
+	}
+
+	if (msg.startsWith('~emojify')) {
+		const m = msg.split('~emojify ')[1];
+
+		if (/^[a-zA-Z !]+$/.test(m)) {
+			const arr = [];
+			m.split('').forEach(l => {
+				switch (l) {
+					case '!':
+						arr.push(':exclamation:');
+						break;
+					case ' ':
+						arr.push('  ');
+						break;
+					default:
+						arr.push(`:regional_indicator_${l.toLowerCase()}:`);
+				}
+			});
+			message.channel.send(arr.join(''));
+		} else {
+			message.reply('your message included non-letters. Try again sir.');
+		}
 	}
 });
 
