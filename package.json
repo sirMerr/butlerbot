@@ -20,9 +20,6 @@
   "xo": {
     "esnext": true
   },
-	"scripts": {
-    "start": "node --harmony-async-await butlerbot-discord.js"
-  },
   "devDependencies": {
     "xo": "^0.17.1"
   }
