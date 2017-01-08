@@ -11,6 +11,13 @@ butlerbot.on('ready', () => {
 // event listener for messages
 butlerbot.on('message', message => {
 	const msg = message.content;
+
+	// log messages
+	if (message.channel.isPrivate) {
+		console.log(`(Private) ${message.author.name}: ${message.content}`);
+	} else {
+		console.log(`(${message.server.name} / ${message.channel.name}) ${message.author.name}: ${message.content}`);
+	}
 	if (msg === 'butler' || msg === 'butlerbot') {
 		message.reply('greetings master.');
 	}
