@@ -4,7 +4,7 @@ A slack/discord bot which logs user activity among other butler tasks.
 _butlerbot_ is intended to log tasks and create time sheets for users and group projects automatically each day, as well as basic bot commands. Inspired by a few slackbots, including NikaBot. The Slack version uses BotKit and the discord version uses discord.js.
 
 ## Integration
-This butlerbot is not yet available for use, as he is still being trained to be the best butler for your household. 
+This butlerbot is not yet available for public use, as he is still being trained to be the best butler for your household. 
 
 ## Useful Commands (not all available)
 
