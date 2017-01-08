@@ -1,1 +1,1 @@
-web: node butler-discord.js
+web: node butlerbot-discord.js
