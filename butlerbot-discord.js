@@ -38,7 +38,6 @@ butlerbot.on('ready', () => {
 
 // event listener for messages
 butlerbot.on('message', message => {
-
 	const msg = message.content;
 	const {username: authorName} = message.author;
 	const {name: channelName} = message.channel;
@@ -55,8 +54,6 @@ butlerbot.on('message', message => {
 	} else {
 		console.log(`(${guildName} / ${channelName}) ${authorName}: ${msg}`);
 	}
-
-	const msg = message.content;
 
 	switch (getCommand(msg)) {
 		case 'help': {
