@@ -6,11 +6,41 @@ const app = express();
 const butlerbot = new Discord.Client();
 const token = 'MjY3NzU0NzgyMzgxNDQxMDM2.C1Q8UQ.MhW8oPNdEOne_-mn4ONnGb5rpYQ';
 const commands = {
-	butler: 'description of this',
-	idiot: 'description of this',
-	'~emojify': 'description of this',
-	'~help': 'description of this'
+	butler: 'Will respond to you in a respectful tone.',
+	idiot: 'I shouldn\'t have to tell you.',
+	'~emojify': 'Transforms a message into bubble letters.',
+	'~help': 'Shows description for each command.'
 };
+
+function getCommand(msg) {
+	let cmd;
+
+	switch (msg) {
+		case '~help':
+			cmd = 'help';
+			break;
+		default:
+			break;
+	}
+
+	if (msg.startsWith('~emojify')) {
+		cmd = 'emojify';
+	}
+
+	if (msg.startsWith('~emojify')) {
+		cmd = 'emojify';
+	}
+
+	if (msg.includes('idiot')) {
+		cmd = 'idiot';
+	}
+
+	if (msg.includes('butler')) {
+		cmd = 'butler';
+	}
+
+	return cmd;
+}
 
 // turn butlerbot on, make sure it's ready before receiving messages
 butlerbot.on('ready', () => {
@@ -19,7 +49,9 @@ butlerbot.on('ready', () => {
 
 // event listener for messages
 butlerbot.on('message', message => {
-	const msg = message.content;
+	if (message.author.username === 'butlerbot') {
+		return;
+	}
 
 	// log messages
 	if (message.channel.isPrivate) {
@@ -28,23 +60,17 @@ butlerbot.on('message', message => {
 		console.log(`(${message.guild.name} / ${message.channel.name}) ${message.author.username}: ${message.content}`);
 	}
 
-	// Checks for commands
-	if (message.author.username !== 'butlerbot') {
-		if (msg.includes('butler') || msg === 'hi butlerbot') {
-			message.reply('greetings master.');
-		}
+	const msg = message.content;
 
-		if (msg === '~help') {
+	switch (getCommand(msg)) {
+		case 'help': {
 			const arr = [];
 			Object.keys(commands).forEach(cmd => arr.push(`\`${cmd}\`: ${commands[cmd]}`));
 			message.channel.send(arr.join('\n'));
+			break;
 		}
 
-		if (msg.includes('idiot')) {
-			message.channel.send('Sir, my database found this user to be the biggest one: ' + message.author.avatarURL);
-		}
-
-		if (msg.startsWith('~emojify ')) {
+		case 'emojify': {
 			let vertical = false;
 			if (msg.includes('(vertical) ')) {
 				vertical = true;
@@ -70,7 +96,21 @@ butlerbot.on('message', message => {
 			} else {
 				message.reply('your message included non-letters. Try again sir.');
 			}
+			break;
 		}
+
+		case 'butler': {
+			message.reply('greetings master.');
+			break;
+		}
+
+		case 'idiot': {
+			message.channel.send('Sir, my database found this user to be the biggest one: ' + message.author.avatarURL);
+			break;
+		}
+
+		default:
+			break;
 	}
 });
 
