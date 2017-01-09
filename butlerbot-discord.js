@@ -23,45 +23,48 @@ butlerbot.on('message', message => {
 		console.log(`(${message.guild.name} / ${message.channel.name}) ${message.author.username}: ${message.content}`);
 	}
 
-	if (msg.includes('butler') || msg === 'hi butlerbot') {
-		message.reply('greetings master.');
-	}
-
-	if (msg.includes('idiot')) {
-		message.channel.send('Sir, my database found this user to be the biggest one: ' + message.author.avatarURL);
-	}
-
-	// if (msg === '~help') {
-	// 	for (let i = 0; i++; i < commands.length) {
-	// 		message.channel.send(commands[i] + '\n');
-	// 	}
-	// }
-
-	if (msg.startsWith('~emojify ')) {
-		let vertical = false;
-		if (msg.includes('(vertical) ')) {
-			vertical = true;
+	// Checks for commands
+	if (message.author.username !== 'butlerbot') {
+		if (msg.includes('butler') || msg === 'hi butlerbot') {
+			message.reply('greetings master.');
 		}
 
-		const m = msg.split('~emojify ')[1].replace('(vertical) ', '');
+		if (msg.includes('idiot')) {
+			message.channel.send('Sir, my database found this user to be the biggest one: ' + message.author.avatarURL);
+		}
 
-		if (/^[a-zA-Z0-9 !]+$/.test(m)) {
-			const arr = [];
-			m.split('').forEach(l => {
-				switch (l) {
-					case '!':
-						arr.push(':exclamation:');
-						break;
-					case ' ':
-						arr.push('  ');
-						break;
-					default:
-						arr.push(`:regional_indicator_${l.toLowerCase()}:`);
-				}
-			});
-			message.channel.send(arr.join(vertical ? '\n' : '')).then(message.delete());
-		} else {
-			message.reply('your message included non-letters. Try again sir.');
+		// if (msg === '~help') {
+		// 	for (let i = 0; i++; i < commands.length) {
+		// 		message.channel.send(commands[i] + '\n');
+		// 	}
+		// }
+
+		if (msg.startsWith('~emojify ')) {
+			let vertical = false;
+			if (msg.includes('(vertical) ')) {
+				vertical = true;
+			}
+
+			const m = msg.split('~emojify ')[1].replace('(vertical) ', '');
+
+			if (/^[a-zA-Z0-9 !]+$/.test(m)) {
+				const arr = [];
+				m.split('').forEach(l => {
+					switch (l) {
+						case '!':
+							arr.push(':exclamation:');
+							break;
+						case ' ':
+							arr.push('  ');
+							break;
+						default:
+							arr.push(`:regional_indicator_${l.toLowerCase()}:`);
+					}
+				});
+				message.channel.send(arr.join(vertical ? '\n' : '')).then(message.delete());
+			} else {
+				message.reply('your message included non-letters. Try again sir.');
+			}
 		}
 	}
 });
