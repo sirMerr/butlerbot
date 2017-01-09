@@ -13,33 +13,25 @@ const commands = {
 };
 
 function getCommand(msg) {
-	let cmd;
-
-	switch (msg) {
-		case '~help':
-			cmd = 'help';
-			break;
-		default:
-			break;
+	if (msg.startsWith('~help')) {
+		return 'help';
 	}
 
 	if (msg.startsWith('~emojify')) {
-		cmd = 'emojify';
+		return 'emojify';
 	}
 
 	if (msg.startsWith('~emojify')) {
-		cmd = 'emojify';
+		return 'emojify';
 	}
 
 	if (msg.includes('idiot')) {
-		cmd = 'idiot';
+		return 'idiot';
 	}
 
 	if (msg.includes('butler')) {
-		cmd = 'butler';
+		return 'butler';
 	}
-
-	return cmd;
 }
 
 // turn butlerbot on, make sure it's ready before receiving messages
