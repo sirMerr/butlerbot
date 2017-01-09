@@ -32,12 +32,11 @@ butlerbot.on('message', message => {
 
 	if (msg.startsWith('~emojify ')) {
 		let vertical = false;
-		if (msg.includes('vertical ')) {
+		if (msg.includes('(vertical) ')) {
 			vertical = true;
-			msg.replace('vertical ', '');
 		}
 
-		const m = msg.split('~emojify ')[1];
+		const m = msg.split('~emojify ')[1].replace('(vertical) ', '');
 
 		if (/^[a-zA-Z0-9 !]+$/.test(m)) {
 			const arr = [];
@@ -61,7 +60,6 @@ butlerbot.on('message', message => {
 });
 
 butlerbot.login(token);
-
 
 // Stuff for Heroku to run properly
 app.set('port', (process.env.PORT || 5000));
