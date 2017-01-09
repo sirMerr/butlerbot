@@ -9,11 +9,11 @@ This butlerbot is not yet available for public use, as he is still being trained
 ## Useful Commands (not all available)
 
 `hello` -- Greets user    
-    
+
 `who are you`  -- butlerbot description    
-    
+
 `help` -- commands list    
-    
+
 `log [date] ([comments])` -- log project/time or edits it    
 
 `timesheet [this week | last week | month | all ]` -- display logs    
@@ -32,6 +32,9 @@ This butlerbot is not yet available for public use, as he is still being trained
 `world domination` -- starts a quest for world domination    
 
 `make tea` -- butlerbot will share his famous earl grey apple berry tea and matcha scones recipe.    
+
+`~emojify [string]` -- emojifies your string
+`emojify (vertical) [string]` -- emojifies your string vertically
 
 ## License
 MIT

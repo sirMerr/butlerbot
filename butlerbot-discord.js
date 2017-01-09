@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 
 const butlerbot = new Discord.Client();
 const token = 'MjY3NzU0NzgyMzgxNDQxMDM2.C1Q8UQ.MhW8oPNdEOne_-mn4ONnGb5rpYQ';
+const commands = ['butler', 'idiot', '~emojify', '~help'];
 
 // turn butlerbot on, make sure it's ready before receiving messages
 butlerbot.on('ready', () => {
@@ -19,12 +20,18 @@ butlerbot.on('message', message => {
 		console.log(`(${message.guild.name} / ${message.channel.name}) ${message.author.username}: ${message.content}`);
 	}
 
-	if (msg === 'butler' || msg === 'butlerbot') {
+	if (msg.includes('butler') || msg === 'hi butlerbot') {
 		message.reply('greetings master.');
 	}
 
-	if (msg === 'who\'s the idiot' || msg === 'idiot') {
-		message.reply(message.author.avatarURL);
+	if (msg.includes('idiot')) {
+		message.send('Sir, my database found this user to be the biggest idiot: ' + message.author.avatarURL);
+	}
+
+	if (msg === '~help') {
+		for (let i = 0; i++; i < commands.length) {
+			message.send(commands[i] + '\n');
+		}
 	}
 
 	if (msg.startsWith('~emojify ')) {

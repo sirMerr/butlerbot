@@ -1,10 +1,10 @@
 {
   "name": "butlerbot",
   "version": "1.0.0",
-  "description": "A slack bot which greets users among other butler tasks",
-  "main": "lib/butlerbot.js",
+  "description": "A slack/discord bot which performs butler tasks",
+  "main": "butlerbot-discord.js",
   "repository": "https://github.com/sirMerr/butlerbot.git",
-  "author": "Tiffany Le-Nguyen",
+  "author": "Tiffany Le-Nguyen & Jason Etcovitch",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.15.2",
