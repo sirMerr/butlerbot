@@ -21,12 +21,6 @@ butlerbot.on('ready', () => {
 butlerbot.on('message', message => {
 	const msg = message.content;
 
-	if (msg === '~help') {
-		const arr = [];
-		Object.keys(commands).forEach(cmd => arr.push(`\`${cmd}\`: ${commands[cmd]}`));
-		message.channel.send(arr.join('\n'));
-	}
-
 	// log messages
 	if (message.channel.isPrivate) {
 		console.log(`(Private) ${message.author.username}: ${message.content}`);
@@ -40,15 +34,15 @@ butlerbot.on('message', message => {
 			message.reply('greetings master.');
 		}
 
+		if (msg === '~help') {
+			const arr = [];
+			Object.keys(commands).forEach(cmd => arr.push(`\`${cmd}\`: ${commands[cmd]}`));
+			message.channel.send(arr.join('\n'));
+		}
+
 		if (msg.includes('idiot')) {
 			message.channel.send('Sir, my database found this user to be the biggest one: ' + message.author.avatarURL);
 		}
-
-		// if (msg === '~help') {
-		// 	for (let i = 0; i++; i < commands.length) {
-		// 		message.channel.send(commands[i] + '\n');
-		// 	}
-		// }
 
 		if (msg.startsWith('~emojify ')) {
 			let vertical = false;
