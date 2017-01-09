@@ -5,7 +5,12 @@ const Discord = require('discord.js');
 const app = express();
 const butlerbot = new Discord.Client();
 const token = 'MjY3NzU0NzgyMzgxNDQxMDM2.C1Q8UQ.MhW8oPNdEOne_-mn4ONnGb5rpYQ';
-const commands = ['butler', 'idiot', '~emojify', '~help'];
+const commands = {
+	butler: 'description of this',
+	idiot: 'description of this',
+	'~emojify': 'description of this',
+	'~help': 'description of this'
+};
 
 // turn butlerbot on, make sure it's ready before receiving messages
 butlerbot.on('ready', () => {
@@ -15,6 +20,12 @@ butlerbot.on('ready', () => {
 // event listener for messages
 butlerbot.on('message', message => {
 	const msg = message.content;
+
+	if (msg === '~help') {
+		const arr = [];
+		Object.keys(commands).forEach(cmd => arr.push(`\`${cmd}\`: ${commands[cmd]}`));
+		message.channel.send(arr.join('\n'));
+	}
 
 	// log messages
 	if (message.channel.isPrivate) {
