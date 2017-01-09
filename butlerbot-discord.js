@@ -29,8 +29,9 @@ butlerbot.on('message', message => {
 
 	if (msg.startsWith('~emojify ')) {
 		let vertical = false;
-		if (msg.contains('(vertical)')) {
+		if (msg.includes('vertical ')) {
 			vertical = true;
+			msg.replace('vertical ', '');
 		}
 
 		const m = msg.split('~emojify ')[1];
