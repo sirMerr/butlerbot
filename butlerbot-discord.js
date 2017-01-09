@@ -31,11 +31,11 @@ butlerbot.on('message', message => {
 		message.channel.send('Sir, my database found this user to be the biggest idiot: ' + message.author.avatarURL);
 	}
 
-	if (msg === '~help') {
-		for (let i = 0; i++; i < commands.length) {
-			message.channel.send(commands[i] + '\n');
-		}
-	}
+	// if (msg === '~help') {
+	// 	for (let i = 0; i++; i < commands.length) {
+	// 		message.channel.send(commands[i] + '\n');
+	// 	}
+	// }
 
 	if (msg.startsWith('~emojify ')) {
 		let vertical = false;
