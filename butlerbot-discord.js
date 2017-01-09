@@ -21,10 +21,6 @@ function getCommand(msg) {
 		return 'emojify';
 	}
 
-	if (msg.startsWith('~emojify')) {
-		return 'emojify';
-	}
-
 	if (msg.includes('idiot')) {
 		return 'idiot';
 	}
