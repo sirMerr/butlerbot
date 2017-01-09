@@ -28,7 +28,7 @@ butlerbot.on('message', message => {
 	}
 
 	if (msg.includes('idiot')) {
-		message.channel.send('Sir, my database found this user to be the biggest idiot: ' + message.author.avatarURL);
+		message.channel.send('Sir, my database found this user to be the biggest one: ' + message.author.avatarURL);
 	}
 
 	// if (msg === '~help') {
