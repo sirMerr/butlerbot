@@ -20,12 +20,15 @@ butlerbot.on('ready', () => {
 // event listener for messages
 butlerbot.on('message', message => {
 	const msg = message.content;
+	const {username: authorName} = message.author;
+	const {name: channelName} = message.channel;
+	const {name: guildName} = message.guild;
 
 	// log messages
 	if (message.channel.isPrivate) {
-		console.log(`(Private) ${message.author.username}: ${message.content}`);
+		console.log(`(Private) ${authorName}: ${msg}`);
 	} else {
-		console.log(`(${message.guild.name} / ${message.channel.name}) ${message.author.username}: ${message.content}`);
+		console.log(`(${guildName} / ${channelName}) ${authorName}: ${msg}`);
 	}
 
 	// Checks for commands
@@ -41,7 +44,7 @@ butlerbot.on('message', message => {
 		}
 
 		if (msg.includes('idiot')) {
-			message.channel.send('Sir, my database found this user to be the biggest one: ' + message.author.avatarURL);
+			message.channel.send('Sir, my database found this user to be the biggest idiot: ' + message.author.avatarURL);
 		}
 
 		if (msg.startsWith('~emojify ')) {
