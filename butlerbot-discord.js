@@ -39,9 +39,9 @@ butlerbot.on('ready', () => {
 // event listener for messages
 butlerbot.on('message', message => {
 	const msg = message.content;
-	const {username: authorName} = message.author;
-	const {name: channelName} = message.channel;
-	const {name: guildName} = message.guild;
+	const { username: authorName } = message.author;
+	const { name: channelName } = message.channel;
+	const { name: guildName } = message.guild;
 
 	// makes sure butlerbot isn't triggering cases
 	if (message.author.username === 'butlerbot') {
@@ -72,17 +72,14 @@ butlerbot.on('message', message => {
 			const m = msg.split('~emojify ')[1].replace('(vertical) ', '');
 
 			if (/^[a-zA-Z0-9 !]+$/.test(m)) {
-				const arr = [];
-				m.split('').forEach(l => {
+				const arr = m.split('').map(l => {
 					switch (l) {
 						case '!':
-							arr.push(':exclamation:');
-							break;
+							return ':exclamation:';
 						case ' ':
-							arr.push('  ');
-							break;
+							return '  ';
 						default:
-							arr.push(`:regional_indicator_${l.toLowerCase()}:`);
+							return `:regional_indicator_${l.toLowerCase()}:`;
 					}
 				});
 				message.channel.send(arr.join(vertical ? '\n' : '')).then(message.delete());
