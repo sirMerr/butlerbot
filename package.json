@@ -20,7 +20,11 @@
     "test": "xo"
   },
   "xo": {
-    "esnext": true
+    "esnext": true,
+    "rules": {
+      "object-curly-spacing": ["error", "always"],
+      "curly": ["error", "multi-line"]
+    }
   },
   "devDependencies": {
     "xo": "^0.17.1"
