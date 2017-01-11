@@ -13,23 +13,8 @@ const commands = {
 	'~praiseme': '[unavailable] Does exactly what it says.'
 };
 
-function getCommand(msg) {
-	if (msg.startsWith('~help')) {
-		return 'help';
-	}
-
-	if (msg.startsWith('~emojify')) {
-		return 'emojify';
-	}
-
-	if (msg.includes('idiot')) {
-		return 'idiot';
-	}
-
-	if (msg.includes('butler')) {
-		return 'butler';
-	}
-}
+const getCommand = require('./commands/get-command');
+const emojify = require('./commands/emojify');
 
 // turn butlerbot on, make sure it's ready before receiving messages
 butlerbot.on('ready', () => {
@@ -44,7 +29,7 @@ butlerbot.on('message', message => {
 	const { name: guildName } = message.guild;
 
 	// makes sure butlerbot isn't triggering cases
-	if (message.author.username === 'butlerbot') return;
+	if (authorName === 'butlerbot') return;
 
 	// log messages
 	if (message.channel.isPrivate) {
@@ -55,35 +40,13 @@ butlerbot.on('message', message => {
 
 	switch (getCommand(msg)) {
 		case 'help': {
-			const arr = [];
-			Object.keys(commands).forEach(cmd => arr.push(`\`${cmd}\`: ${commands[cmd]}`));
+			const arr = Object.keys(commands).map(cmd => `\`${cmd}\`: ${commands[cmd]}`);
 			message.channel.send(arr.join('\n'));
 			break;
 		}
 
 		case 'emojify': {
-			let vertical = false;
-			if (msg.includes('(vertical) ')) {
-				vertical = true;
-			}
-
-			const m = msg.split('~emojify ')[1].replace('(vertical) ', '');
-
-			if (/^[a-zA-Z0-9 !]+$/.test(m)) {
-				const arr = m.split('').map(l => {
-					switch (l) {
-						case '!':
-							return ':exclamation:';
-						case ' ':
-							return '  ';
-						default:
-							return `:regional_indicator_${l.toLowerCase()}:`;
-					}
-				});
-				message.channel.send(arr.join(vertical ? '\n' : '')).then(message.delete());
-			} else {
-				message.reply('your message included non-letters. Try again sir.');
-			}
+			emojify(message);
 			break;
 		}
 
