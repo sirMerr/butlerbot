@@ -6,6 +6,8 @@ _butlerbot_ is intended to log tasks and create time sheets for users and group 
 ## Integration
 This butlerbot is not yet available for public use, as he is still being trained to be the best butler for your household. Note, if you play with this, you will notice there are unused dependencies. This is because a prior version of butlerbot used them and will be removed as the more complete version of butlerbot is made.
 
+Additionally, butlerbot will be developed foremost for discord, then for slack.
+
 ## Useful Commands (not all available)
 
 `hello` -- Greets user    
