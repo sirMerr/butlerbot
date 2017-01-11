@@ -9,20 +9,19 @@ This butlerbot is not yet available for public use, as he is still being trained
 Additionally, butlerbot will be developed foremost for discord, then for slack.
 
 ## Useful Commands (not all available)
-|                                                              Commands | Description                                  |
-|----------------------------------------------------------------------:|----------------------------------------------|
-|                                                               `hello` | Greets user                                  |
-|                                                         `who are you` | butlerbot description                        |
-|                                                                `help` | commands list                                |
-|                                             `log [date] ([comments])` | log project/time or edits it                 |
-|                    `timesheet [this week | last week | month | all ]` | display logs                                 |
-|                                         `work [time (hours/minutes)]` | opens work session for x time                |
-|                                                    `end` | `end work` | stop work session if open                    |
-| `break` | `break work` | `pause` | `pause work`| `stop` | `stop work` | butlerbot will prepare snacks for your break |
-|                                                 `start`| `start work` | restarts work session                        |
-|                                                                       |                                              |
-|                                                                       |                                              |  
-
+|                                                     Commands | Description                                  |
+|-------------------------------------------------------------:|----------------------------------------------|
+|                                                     `butler` | butlerbot will welcome you                   |
+|                                                `who are you` | butlerbot description                        |
+|                                                       `help` | commands list                                |
+|                                    `log [date] ([comments])` | log project/time or edits it                 |
+|              `timesheet [this week /last week/ month/ all ]` | display logs                                 |
+|                                `work [time (hours/minutes)]` | opens work session for x time                |
+|                                             `end` `end work` | stop work session if open                    |
+| `break` `break work` `pause` `pause work` `stop` `stop work` | butlerbot will prepare snacks for your break |
+|                                         `start` `start work` | restarts work session                        |
+|                                                              |                                              |
+|                                                              |                                              |
 *probably will not be implemented
 `typeface` [website] | `font` [website] -- butlerbot will show a list of typefaces used on a website
 
