@@ -39,5 +39,10 @@ This butlerbot is not yet available for public use, as he is still being trained
 `~emojify [string]` -- emojifies your string
 `emojify (vertical) [string]` -- emojifies your string vertically
 
+## Automatic Processes (not all available)
+
+### butlerbot git Changes and Deploys Notifications
+When re-deployed (butlerbot redeploys when pinged on heroku or when a commit is made to github), butlerbot will notify users (without mentioning them, or just mentioning partners) that it has been redeployed or changed.
+
 ## License
 MIT
