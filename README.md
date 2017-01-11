@@ -26,6 +26,9 @@ This butlerbot is not yet available for public use, as he is still being trained
 
 `start`| `start work` -- restarts work session    
 
+*probably will not be implemented
+`typeface` [website] | `font` [website] -- butlerbot will show a list of typefaces used on a website
+
 ## Fun Commands (not all available)
 `who's the idiot` | `idiot` -- butlerbot will give his opinion of which user's the biggest idiot by returning their avatar    
 
