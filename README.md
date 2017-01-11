@@ -15,25 +15,22 @@ Additionally, butlerbot will be developed foremost for discord, then for slack.
 |                                                `who are you` | butlerbot description                        |
 |                                                       `help` | commands list                                |
 |                                    `log [date] ([comments])` | log project/time or edits it                 |
-|              `timesheet [this week /last week/ month/ all ]` | display logs                                 |
+|              `timesheet [this week/last week/month/all ]` | display logs                                 |
 |                                `work [time (hours/minutes)]` | opens work session for x time                |
 |                                             `end` `end work` | stop work session if open                    |
 | `break` `break work` `pause` `pause work` `stop` `stop work` | butlerbot will prepare snacks for your break |
 |                                         `start` `start work` | restarts work session                        |
-|                                                              |                                              |
-|                                                              |                                              |
 *probably will not be implemented
 `typeface` [website] | `font` [website] -- butlerbot will show a list of typefaces used on a website
 
 ## Fun Commands (not all available)
-`who's the idiot` | `idiot` -- butlerbot will give his opinion of which user's the biggest idiot by returning their avatar    
-
-`world domination` -- starts a quest for world domination    
-
-`make tea` -- butlerbot will share his famous earl grey apple berry tea and matcha scones recipe.    
-
-`~emojify [string]` -- emojifies your string
-`emojify (vertical) [string]` -- emojifies your string vertically
+|                      Commands | Descriptions                                                                                |
+|------------------------------:|---------------------------------------------------------------------------------------------|
+|     `who's the idiot`/`idiot` | butlerbot will give his opinion of which user's the biggest idiot by returning their avatar |
+|            `world domination` | starts a quest for world domination                                                         |
+|                    `make tea` | butlerbot will share his famous earl grey apple berry tea and matcha scones recipe.         |
+|           `~emojify [string]` | emojifies your string                                                                       |
+| `emojify (vertical) [string]` | emojifies your string vertically                                                            
 
 ## Automatic Processes (not all available)
 
