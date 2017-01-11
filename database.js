@@ -11,29 +11,3 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => {
   // we're connected!
 });
-
-const kittySchema = mongoose.Schema({
-	username: String
-});
-
-// NOTE: methods must be added to the schema before compiling it with mongoose.model()
-kittySchema.methods.speak = function () {
-	const greeting = this.username ?
-    'Meow username is ' + this.username :
-    'I don\'t have a username';
-	console.log(greeting);
-};
-
-const Kitten = mongoose.model('Kitten', kittySchema);
-
-const silence = new Kitten({username: 'Silence'});
-console.log(silence.username); // 'Silence'
-
-const fluffy = new Kitten({username: 'fluffy'});
-
-fluffy.save((err, fluffy) => {
-	if (err) {
-		return console.error(err);
-	}
-	fluffy.speak();
-});

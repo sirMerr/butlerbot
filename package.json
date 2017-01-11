@@ -22,8 +22,14 @@
   "xo": {
     "esnext": true,
     "rules": {
-      "object-curly-spacing": ["error", "always"],
-      "curly": ["error", "multi-line"]
+      "object-curly-spacing": [
+        "error",
+        "always"
+      ],
+      "curly": [
+        "error",
+        "multi-line"
+      ]
     }
   },
   "devDependencies": {
