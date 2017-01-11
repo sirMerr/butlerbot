@@ -44,9 +44,7 @@ butlerbot.on('message', message => {
 	const { name: guildName } = message.guild;
 
 	// makes sure butlerbot isn't triggering cases
-	if (message.author.username === 'butlerbot') {
-		return;
-	}
+	if (message.author.username === 'butlerbot') return;
 
 	// log messages
 	if (message.channel.isPrivate) {
