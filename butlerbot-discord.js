@@ -15,6 +15,7 @@ const commands = {
 
 const getCommand = require('./commands/get-command');
 const emojify = require('./commands/emojify');
+const praiseme = require('./commands/praiseme');
 
 // turn butlerbot on, make sure it's ready before receiving messages
 butlerbot.on('ready', () => {
@@ -47,6 +48,11 @@ butlerbot.on('message', message => {
 
 		case 'emojify': {
 			emojify(message);
+			break;
+		}
+
+		case 'praiseme': {
+			praiseme(message);
 			break;
 		}
 
