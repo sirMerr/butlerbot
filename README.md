@@ -1,12 +1,12 @@
 # butlerbot
 A slack/discord bot which logs user activity among other butler tasks.
 
-_butlerbot_ is intended to log tasks and create time sheets for users and group projects automatically each day, as well as basic bot commands. Inspired by a few slackbots, including NikaBot. The Slack version uses BotKit and the discord version uses discord.js.
+_butlerbot_ is intended to log tasks and create time sheets for users and group projects automatically each day, as well as basic bot commands. Inspired by a few slackbots, including NikaBot. The Slack version uses BotKit and the Discord version uses discord.js.
 
 ## Integration :octopus:
 This butlerbot is not yet available for public use, as he is still being trained to be the best butler for your household. Note, if you play with this, you will notice there are unused dependencies. This is because a prior version of butlerbot used them and will be removed as the more complete version of butlerbot is made.
 
-Additionally, butlerbot will be developed foremost for discord, then for slack.
+Additionally, butlerbot will be developed foremost for Discord, then for Slack.
 
 ## How to Query the API Locally :wrench:
 Assuming you have the files, and did `yarn install` | `yarn` | `npm install` or equivalent, here's how to test and do stuff with our current limited API.
@@ -26,7 +26,7 @@ Every time you make a call, the terminal will show it too, because we care about
 ![console displaying request type and](http://i.imgur.com/L7SiIJH.png)
 
 ### Other API calls and Extras
-Ask [@sirmerr](https://github.com/sirMerr/butlerbot/issues/new) or [@etcoman](https://github.com/JasonEtco) for a full comprehensive list and more api calls. It takes time to document and Jason doesn't help me, so bother him :poop: .
+Ask [@sirMerr](https://github.com/sirMerr/butlerbot/issues/new) or [@JasonEtco](https://github.com/JasonEtco) for a full comprehensive list and more api calls. It takes time to document and Jason doesn't help me, so bother him :poop: .
 
 ## Useful Commands (not all available) :tada:
 |                                                     Commands | Description                                  |
@@ -34,23 +34,23 @@ Ask [@sirmerr](https://github.com/sirMerr/butlerbot/issues/new) or [@etcoman](ht
 |                                                     `butler` | butlerbot will welcome you                   |
 |                                                `who are you` | butlerbot description                        |
 |                                                       `help` | commands list                                |
-|                                    `log [date] ([comments])` | log project/time or edits it                 |
-|              `timesheet [this week/last week/month/all ]` | display logs                                 |
-|                                `work [time (hours/minutes)]` | opens work session for x time                |
+|                                    `~log [date] ([comments])` | log project/time or edits it                 |
+|              `~timesheet [this week/last week/month/all ]` | display logs                                 |
+|                                `~work [time (hours/minutes)]` | opens work session for x time                |
 |                                             `end` `end work` | stop work session if open                    |
-| `break` `break work` `pause` `pause work` `stop` `stop work` | butlerbot will prepare snacks for your break |
-|                                         `start` `start work` | restarts work session                        |
+| `~break` `~break work` `~pause` `~pause work` `~stop` `~stop work` | butlerbot will prepare snacks for your break |
+|                                         `~start` `~start work` | restarts work session                        |
 *probably will not be implemented
-`typeface` [website] | `font` [website] -- butlerbot will show a list of typefaces used on a website
+`~typeface` [website] | `~font` [website] -- butlerbot will show a list of typefaces used on a website
 
 ## Fun Commands (not all available) :dancers:
 |                      Commands | Descriptions                                                                                |
 |------------------------------:|---------------------------------------------------------------------------------------------|
 |     `who's the idiot`/`idiot` | butlerbot will give his opinion of which user's the biggest idiot by returning their avatar |
-|            `world domination` | starts a quest for world domination                                                         |
+|            `~world domination` | starts a quest for world domination                                                         |
 |                    `make tea` | butlerbot will share his famous earl grey apple berry tea and matcha scones recipe.         |
 |           `~emojify [string]` | emojifies your string                                                                       |
-| `emojify (vertical) [string]` | emojifies your string vertically                                                            
+| `~emojify (vertical) [string]` | emojifies your string vertically                                                            
 
 ## Automatic Processes (not all available) :new_moon_with_face:
 
