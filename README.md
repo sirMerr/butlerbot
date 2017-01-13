@@ -22,10 +22,12 @@ In Postman, type in the following and press send. You should be presented with u
 `GET http://localhost:5000/api/users`    
 ![GET http://localhost:5000/api/users image](http://i.imgur.com/ln4ejtk.png)
 
+Every time you make a call, the terminal will show it too, because we care about continuity.
+![console displaying request type and](http://i.imgur.com/L7SiIJH.png)
+
 ### Other API calls and Extras
 Ask [@sirmerr](https://github.com/sirMerr/butlerbot/issues/new) or [@etcoman](https://github.com/JasonEtco) for a full comprehensive list and more api calls. It takes time to document and Jason doesn't help me, so bother him :poop: .
 
-In Postman, type in `POST http://localhost:5000/api/users`
 ## Useful Commands (not all available) :tada:
 |                                                     Commands | Description                                  |
 |-------------------------------------------------------------:|----------------------------------------------|
