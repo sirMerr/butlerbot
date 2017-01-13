@@ -1,5 +1,5 @@
 # butlerbot
-A slack/discord bot which logs user activity among other butler tasks.
+A Slack/Discord bot which logs user activity among other butler tasks.
 
 _butlerbot_ is intended to log tasks and create time sheets for users and group projects automatically each day, as well as basic bot commands. Inspired by a few slackbots, including NikaBot. The Slack version uses BotKit and the Discord version uses discord.js.
 
@@ -55,7 +55,7 @@ Ask [@sirMerr](https://github.com/sirMerr/butlerbot/issues/new) or [@JasonEtco](
 ## Automatic Processes (not all available) :new_moon_with_face:
 
 ### butlerbot git Changes and Deploys Notifications
-When re-deployed (butlerbot redeploys when pinged on heroku or when a commit is made to github), butlerbot will notify users (without mentioning them, or just mentioning partners) that it has been redeployed or changed.
+When re-deployed (butlerbot redeploys when pinged on Heroku or when a commit is made to GitHub), butlerbot will notify users (without mentioning them, or just mentioning partners) that it has been redeployed or changed.
 
 ## License :bookmark_tabs:
 MIT
