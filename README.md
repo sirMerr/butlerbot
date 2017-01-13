@@ -14,14 +14,13 @@ Using Postman Chrome extension (https://www.getpostman.com/)
 
 ### Running the Server Locally
 In command line, from your butlerbot directory run:    
-`node app.js`
-![command run in terminal image](http://imgur.com/8tVo44c)
+`node app.js`    
+![command run in terminal image](http://i.imgur.com/8tVo44c.png)
 
 ### GET all users
 In Postman, type in the following and press send. You should be presented with user documents (see mongoose documents).    
-`GET http://localhost:5000/api/users`
-
-![GET http://localhost:5000/api/users image](http://imgur.com/ln4ejtk)
+`GET http://localhost:5000/api/users`    
+![GET http://localhost:5000/api/users image](http://i.imgur.com/ln4ejtk.png)
 
 ### Other API calls and Extras
 Ask [@sirmerr](https://github.com/sirMerr/butlerbot/issues/new) or [@etcoman](https://github.com/JasonEtco) for a full comprehensive list and more api calls. It takes time to document and Jason doesn't help me, so bother him :poop: .
