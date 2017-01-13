@@ -1,8 +1,6 @@
-const path = require('path');
-const express = require('express');
 const Discord = require('discord.js');
+const app = require('./app');
 
-const app = express();
 const butlerbot = new Discord.Client();
 const token = 'MjY3NzU0NzgyMzgxNDQxMDM2.C1Q8UQ.MhW8oPNdEOne_-mn4ONnGb5rpYQ';
 const commands = {
@@ -72,15 +70,3 @@ butlerbot.on('message', message => {
 });
 
 butlerbot.login(token);
-
-// Stuff for Heroku to run properly
-app.set('port', (process.env.PORT || 5000));
-app.use(express.static(path.join(__dirname, 'public')));
-
-app.get('/', (request, response) => {
-	response.send('Hello World!');
-});
-
-app.listen(app.get('port'), () => {
-	console.log('Node app is running at localhost:' + app.get('port'));
-});
