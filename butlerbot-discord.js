@@ -9,7 +9,7 @@ const commands = {
 	'~emojify [(vertical)] [text]': 'Transforms a message into awesome bubble letters.',
 	'~help': 'Shows description for each command.',
 	'~praiseme': 'Does exactly what it says.',
-	'~delete [number]': '[unavailable] Does exactly what it says.'
+	'~delete [number]': 'Does exactly what it says.'
 };
 
 const getCommand = require('./commands/get-command');
