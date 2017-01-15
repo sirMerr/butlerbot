@@ -40,6 +40,7 @@ Ask [@sirMerr](https://github.com/sirMerr/butlerbot/issues/new) or [@JasonEtco](
 |                                             `end` `end work` | stop work session if open                    |
 | `~break` `~break work` `~pause` `~pause work` `~stop` `~stop work` | butlerbot will prepare snacks for your break |
 |                                         `~start` `~start work` | restarts work session                        |
+|                                         `~delete [number]`     | deletes a number of messages                      |
 *probably will not be implemented
 `~typeface` [website] | `~font` [website] -- butlerbot will show a list of typefaces used on a website
 
