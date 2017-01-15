@@ -4,11 +4,12 @@ const app = require('./app');
 const butlerbot = new Discord.Client();
 const token = 'MjY3NzU0NzgyMzgxNDQxMDM2.C1Q8UQ.MhW8oPNdEOne_-mn4ONnGb5rpYQ';
 const commands = {
-	butler: 'Will respond to you in a respectful tone.',
+	butlerbot: 'Will respond to you in a respectful tone.',
 	idiot: 'I shouldn\'t have to tell you.',
-	'~emojify [(vertical)]': 'Transforms a message into awesome bubble letters.',
+	'~emojify [(vertical)] [text]': 'Transforms a message into awesome bubble letters.',
 	'~help': 'Shows description for each command.',
-	'~praiseme': '[unavailable] Does exactly what it says.'
+	'~praiseme': '[unavailable] Does exactly what it says.',
+	'~delete [number]': '[unavailable] Does exactly what it says.'
 };
 
 const getCommand = require('./commands/get-command');
