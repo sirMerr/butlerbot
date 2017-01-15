@@ -1,7 +1,9 @@
 function getRandomPraise(author) {
 	const praises = [
-		`${author} is the most handsome little girl in the world.`,
-		`You know who's super smart? ${author}.`
+		`Master ${author} is the most handsome little girl in the world.`,
+		`You know who's super smart? Master ${author}.`,
+		`I bet Master ${author} knows how to bake mean blueberry scones!`,
+		`Master ${author}, may I say you're as formidable as a Tecumseh Skipper`
 	];
 
 	return praises[Math.floor(Math.random() * praises.length)];

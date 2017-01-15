@@ -89,7 +89,7 @@ router.route('/users/:user_id')
 					res.send(err);
 				}
 
-				console.log('Username updated to' + user.username);
+				console.log('Username updated to ' + user.username);
 				res.json({ message: 'Username updated to: ' + user.username });
 			});
 		});

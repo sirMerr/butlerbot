@@ -14,6 +14,7 @@ const commands = {
 const getCommand = require('./commands/get-command');
 const emojify = require('./commands/emojify');
 const praiseme = require('./commands/praiseme');
+const deleteMsgs = require('./commands/delete');
 
 // turn butlerbot on, make sure it's ready before receiving messages
 butlerbot.on('ready', () => {
@@ -36,7 +37,6 @@ butlerbot.on('message', message => {
 	} else {
 		console.log(`(${guildName} / ${channelName}) ${authorName}: ${msg}`);
 	}
-
 	switch (getCommand(msg)) {
 		case 'help': {
 			const arr = Object.keys(commands).map(cmd => `\`${cmd}\`: ${commands[cmd]}`);
@@ -48,13 +48,17 @@ butlerbot.on('message', message => {
 			emojify(message);
 			break;
 		}
+		case 'delete': {
+			deleteMsgs(message);
+			break;
+		}
 
 		case 'praiseme': {
 			praiseme(message);
 			break;
 		}
 
-		case 'butler': {
+		case 'butlerbot': {
 			message.reply('greetings master.');
 			break;
 		}
@@ -70,3 +74,4 @@ butlerbot.on('message', message => {
 });
 
 butlerbot.login(token);
+module.exports = butlerbot;

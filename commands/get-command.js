@@ -7,7 +7,9 @@ function getCommand(msg) {
 
 	if (msg.includes('idiot')) return 'idiot';
 
-	if (msg.includes('butler')) return 'butler';
+	if (msg.includes('butlerbot')) return 'butlerbot';
+
+	if (msg.startsWith('~delete')) return 'delete';
 }
 
 module.exports = getCommand;
