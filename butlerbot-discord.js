@@ -8,7 +8,7 @@ const commands = {
 	idiot: 'I shouldn\'t have to tell you.',
 	'~emojify [(vertical)] [text]': 'Transforms a message into awesome bubble letters.',
 	'~help': 'Shows description for each command.',
-	'~praiseme': '[unavailable] Does exactly what it says.',
+	'~praiseme': 'Does exactly what it says.',
 	'~delete [number]': '[unavailable] Does exactly what it says.'
 };
 
