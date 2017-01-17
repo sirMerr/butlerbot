@@ -1,3 +1,8 @@
+/**
+ * Praises user based on an array of praises.
+ * @param  {Message.author} author -- author of message
+ * @return {String}        				 -- random praise from array
+ */
 function getRandomPraise(author) {
 	const praises = [
 		`Master ${author} is the most handsome little girl in the world.`,

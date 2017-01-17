@@ -2,16 +2,19 @@ const Discord = require('discord.js');
 const app = require('./app');
 
 const butlerbot = new Discord.Client();
+// needs to be anonymous
 const token = 'MjY3NzU0NzgyMzgxNDQxMDM2.C1Q8UQ.MhW8oPNdEOne_-mn4ONnGb5rpYQ';
+// commands list for ~help command
 const commands = {
 	butlerbot: 'Will respond to you in a respectful tone.',
 	idiot: 'I shouldn\'t have to tell you.',
 	'~emojify [(vertical)] [text]': 'Transforms a message into awesome bubble letters.',
 	'~help': 'Shows description for each command.',
 	'~praiseme': 'Does exactly what it says.',
-	'~delete [number]': 'Does exactly what it says.'
+	'~delete [number]': 'Deletes a number of messages'
 };
 
+// assign consts to commands
 const getCommand = require('./commands/get-command');
 const emojify = require('./commands/emojify');
 const praiseme = require('./commands/praiseme');
@@ -26,8 +29,6 @@ butlerbot.on('ready', () => {
 butlerbot.on('message', message => {
 	const msg = message.content;
 	const { username: authorName } = message.author;
-	const { name: channelName } = message.channel;
-	const { name: guildName } = message.guild;
 
 	// makes sure butlerbot isn't triggering cases
 	if (authorName === 'butlerbot') return;
@@ -36,7 +37,7 @@ butlerbot.on('message', message => {
 	if (message.channel.isPrivate) {
 		console.log(`(Private) ${authorName}: ${msg}`);
 	} else {
-		console.log(`(${guildName} / ${channelName}) ${authorName}: ${msg}`);
+		console.log(`(${message.guild} / ${message.channel}) ${authorName}: ${msg}`);
 	}
 	switch (getCommand(msg)) {
 		case 'help': {

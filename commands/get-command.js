@@ -1,3 +1,8 @@
+/**
+ * Checks if {Message} content is a command and parses it.
+ * @param  {Message.content} msg 	-- message.content from chat
+ * @return {String}     					--command string
+ */
 function getCommand(msg) {
 	if (msg.startsWith('~help')) return 'help';
 

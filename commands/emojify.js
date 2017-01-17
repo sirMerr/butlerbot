@@ -1,3 +1,13 @@
+/**
+ * Sends user's message with emojis, horizontally or
+ * vertically, and deletes the command
+ * message.
+ * @param  {Message} message -- message object
+ * @example
+ * // return HI vertically in emojis
+ * ~emojify (vertical) hi
+ *
+ */
 function emojify(message) {
 	let vertical = false;
 	const msg = message.content;
